@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Simulador de Financiamento</h1>
+            <div class="campo">
+                <label for="valor">Valor: </label>
+                <input type="number" name="valor" id="valor">
+            </div>
+            <div class="campo">
+                <label for="tempo">Tempo: </label>
+                <input type="number" name="tempo" id="tempo" placeholder="em meses">
+            </div>
+            <div class="campo">
+                <label for="taxa">Taxa de juros:</label>
+                <input type="number" name="taxa" id="taxa" placeholder="por mês">
+            </div>
+            
+            <div class="button"><input type="button" value="Calcular" id="calcular"></div>
+
+            <p id="resultado"></p>
+            <p id="parcelas"></p>
+            <p id="totalJuros"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
