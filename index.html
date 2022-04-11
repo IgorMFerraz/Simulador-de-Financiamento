@@ -10,7 +10,12 @@
 <body>
     <main>
         <div class="container">
-            <h1>Simulador de Financiamento</h1>
+            <div class="descricao">
+                <h1>Simulador de Financiamento</h1>
+                <abbr title="Neste simulador utilizamos a formula de juros compostos: também chamados de “juros sobre juros”, os juros compostos são calculados em cima de todo o dinheiro acumulado, ou seja, do montante mais recente.">
+                    <p id="informacoes">i</p>
+                </abbr>
+            </div>
             <div class="campo">
                 <label for="valor">Valor: </label>
                 <input type="number" name="valor" id="valor">
@@ -25,10 +30,14 @@
             </div>
             
             <div class="button"><input type="button" value="Calcular" id="calcular"></div>
-
+        
             <p id="resultado"></p>
             <p id="parcelas"></p>
             <p id="totalJuros"></p>
+
+            <div class="info">
+                <p>Neste simulador utilizamos a formula de juros compostos, também chamados de “juros sobre juros”, os juros compostos são calculados em cima de todo o dinheiro acumulado, ou seja, do montante mais recente.</p>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>

@@ -5,7 +5,7 @@ let res = document.getElementById('resultado')
 let parcelas = document.getElementById('parcelas')
 let totalJuros = document.getElementById('totalJuros')
 let btn = document.getElementById('calcular')
-
+let info = document.querySelector('.info')
 btn.addEventListener('click',calcular)
 function calcular(){
     let C = valor.value
@@ -21,5 +21,6 @@ function calcular(){
     res.innerHTML ="Total finaciado: " + "R$ " + totalFinanciado.toFixed(2)
     parcelas.innerHTML = 'Valor da parcela: ' + "R$ " + parc.toFixed(2)
     totalJuros.innerHTML = 'Valor de juros: ' + "R$ " + jurosTotal.toFixed(2)
+    info.style.display = 'block'
 }
 }
