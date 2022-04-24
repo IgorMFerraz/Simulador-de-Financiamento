@@ -17,7 +17,7 @@ function calcular(){
     } else {
     let formulaCF = 1-(1+I)**-T
     let CF = I/formulaCF
-    let valorParcelas = CF * C
+    let valorParcelas = CF.toFixed(6) * C
     let valorTotalFinanciado = valorParcelas * T
     let jurosDoFinanciamento = valorTotalFinanciado - C
 
