@@ -11,16 +11,20 @@ function calcular(){
     let C = valor.value
     let T = tempo.value
     let taxa = juros.value
+    let I = taxa/100
     if(C == "" || T == "" || taxa == ""){
         alert('Insira todos os valores')
     } else {
-    let I = taxa/100
-    let totalFinanciado = C*(1+I)**T
-    let parc = totalFinanciado / T
-    let jurosTotal = totalFinanciado - C
-    res.innerHTML ="Total finaciado: " + "R$ " + totalFinanciado.toFixed(2)
-    parcelas.innerHTML = 'Valor da parcela: ' + "R$ " + parc.toFixed(2)
-    totalJuros.innerHTML = 'Valor de juros: ' + "R$ " + jurosTotal.toFixed(2)
+    let formulaCF = 1-(1+I)**-T
+    let CF = I/formulaCF
+    let valorParcelas = CF * C
+    let valorTotalFinanciado = valorParcelas * T
+    let jurosDoFinanciamento = valorTotalFinanciado - C
+
+    res.innerHTML = `O valor pago de juros foi de R$ ${jurosDoFinanciamento.toFixed(2)}`
+    parcelas.innerHTML= `O valor da parcela é de R$ ${valorParcelas.toFixed(2)}`
+    totalJuros.innerHTML = `O valor total do financiamento é de R$ ${valorTotalFinanciado.toFixed(2)}` 
     info.style.display = 'block'
+
 }
 }
