@@ -45,6 +45,15 @@ h1{
     padding: 2px;
     border-radius: 15px;
 }
+.hidden{
+    text-align: center;
+}
+p{
+    background-color: #ccc;
+    margin: 5px;
+    border-radius: 2px;
+    
+}
 .campo{
    margin-left: 20px;
 
